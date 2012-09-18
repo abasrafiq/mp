@@ -1,0 +1,19 @@
+## YAML Template.
+---
+Mpgdp:
+  Agrecultue:
+    name:       agreculture
+    hs_code:    '01'
+    MpStatus: active
+  seed:
+    name:       Seed material
+    hs_code:    '02'
+    MpStatus: active
+  diamond:
+    name:       Diamond
+    hs_code:    '03'
+    MpStatus: active
+  stones:
+    name:       Stones
+    hs_code:    '04'
+    MpStatus: active

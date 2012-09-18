@@ -1,0 +1,78 @@
+## Define global constants and parameters here (accessible in frontend and backend)
+
+all:
+  mp_default_calendar: Shamsi
+  mp_list_min_page: 0
+  mp_list_records_per_page: 20
+  mp_priority_areas: '0102050811'
+  mp_default_status_id: 1
+  mp_first_level_gdp_id: 0
+  mp_contact_document_type: 3
+  mp_bupload_document_type: 4
+  mp_agreement_document_type: 5
+  mp_default_value:  -1
+  mp_default_type:  'Export vs. Import'
+  mp_default_country:  'All'
+  mp_default_gdp:  'All'
+  mp_default_type:  'All'
+  mp_default_data_srouce:  'All'
+  mp_default_unit_name: 'Other'
+  mp_default_quantity: -1
+  mp_combo_default: Select
+  mp_min_year:  1380
+  mp_max_year:  1400
+  mp_min_month:  1
+  mp_max_month:  12
+  mp_false: 0
+  mp_true: 1
+  mp_echo_country_code: 999
+  mp_saarc_country_code: 998
+  mp_carec_country_code: 997
+  .array:
+    mp_types:
+      1: Export
+      2: Import
+    mp_echo_countries:
+      1: afghanistan
+      15: azerbaijan
+      102: iran
+      117: kyrgyzstan
+      165: pakistan
+      110: kazakstan
+      212: tajikistan
+      221: turkmenistan
+      220: turkey
+      231: uzbekistan
+    mp_saarc_countries:
+      1: afghanistan
+      100: india
+      165: pakistan
+      18: bangladesh
+      203: sri Lanka
+      152: nepal
+      25: bhutan
+      132: maldives
+    mp_carec_countries:
+      15: Azerbaijan
+      44: china
+      117: Kyrgyzstan
+      110: Kazakstan
+      144: Mongolia
+      212: Tajikistan
+      231: Uzbekistan
+    mp_exprior:
+      'DryFruit': '08'
+      'Carpet': '57'
+      'ConstructionMaterial': '69'
+      'GemStone': '71'
+    mp_imprior:
+      'ConstructionMaterial': '69'
+      'Electronics': '85'
+    mp_public_document_type:
+      public: 1
+      contact: 3
+    mp_private_document_type:
+      private: 2
+      bupload: 4
+      agreement: 5
+    

@@ -1,0 +1,59 @@
+0. Chart views (Abbas)
+1. check code-embedded TODOs
+2. Include images in header (Abbas)
+3. testing on multiple browsers (Abbas)
+4. field widths in lists (Assign to Abbas)
+5. list stuff icons (next,prev...), color of titles, rows... (assign to Abbas)
+6. Abbas to format excel spread sheet (export data)
+7. Handle the application when document_record and comm_record tables are empty
+8. in bulk upload handle the case that the gdp doesn't exist to a higher level gdp 
+9. Use admin gen to create page lists
+10. Change the app.yml array for hs codes of priority areas
+11. flashes (notice, error) to be popped onto menue as small style (like google) (by Abbas)
+12. Show client-side confirm while process going on (bulk upload) -- do with Abbas
+13. List the restrictions and provisions of TMIS as discussed with Peter
+14. Optimize (single-record and bulk upload)
+15. In reports and other pages, if there is no data don't show page-bottom data titles
+16. Home_chart_title: background (Abas)
+17. Home_docs_background_of_links change (Abas)
+18. Data entry forms styles (Abbas)
+19. Include the Quareter parameter in reports generation (Me)
+20. titles of some pages (e.g. http://mp.moci.localhost/backend.php/document/contact_report) are hidden (Abas)
+21. Styles of custom charts
+22. Put tooltip on some links in templates (Abbas); eg edit an entry in gdp list link
+
+<script type="text/javascript">
+    $("#tmp").keyup(function(){
+    txt=$("#tmp").val();
+    $.post("<?php echo url_for('core/test1') ?>",{gdp:txt}, function(result){
+        $("#output").html(result);
+    });
+    }); 
+</script>
+<?php echo javascript_tag("
+$('document').ready(function() {
+    $('#tmp').html('Hi jquery in symfony');
+});"
+)
+?>
+
+
+!isscA@90001
+!!Acss@10009
+
+update mp_gdp oc set oc.parent_id = 
+   if(length(ic.hs_code)=2,
+       ic.id,
+    if(length(ic.hs_code)=4, 
+       (select id from gdp where hs_code = substr(oc.hs_code, 1,2)),
+    if(length(ic.hs_code)=6, 
+       (select id from gdp where hs_code = substr(oc.hs_code, 1,4)),
+    if(length(ic.hs_code)=8, 
+       (select id from gdp where hs_code = substr(oc.hs_code, 1,
+    6))))));
+update mp_gdp c set c.parent_id = 
+(select id from mp_gdp where hs_code = substr(c.hs_code, 1,2) 
+where length(hs_code) = 4;
+update mp_gdp c set c.parent_id =
+(select id from (select * from mp_gdp) as ic where ic.hs_code = substr(c.hs_code, 1,6))
+where length(hs_code) = 8;

@@ -1,0 +1,30 @@
+## YAML Template.
+---
+MpGdpRecord:
+  comrec0:
+    MpGdp:              agreculture
+    MPUnit:             in million
+    year:               1389
+    month:               1
+    value:              5200
+    creation_date:      
+    modification_date:  
+    MpUser:              operator_user
+    comments:           |This entry is used for testing purpose
+    MpStatus:         active
+    
+  gdprecords1:
+    MpGdp:              meat
+    MpUnit:             in Million
+    year:               1388
+    month:               1
+    value:              3925000
+    year:               1388
+    creation_date:      
+    modification_date:  
+    MpUser:           operator_user
+    comments:           |
+      This entry is used for testing purpose
+    MpStatus:         active
+    
+  
